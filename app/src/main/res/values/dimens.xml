@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_CityName">18sp</dimen>
+    <dimen name="text_CountryName">18sp</dimen>
+    <dimen name="text_Details">12sp</dimen>
+    <dimen name="text_TodaysTemp">36sp</dimen>
+    <dimen name="text_gridItems">12sp</dimen>
+
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Weather App</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="network_failed">Network Fail</string>
+    <string name="timed_out">Time Out</string>
+</resources>
