@@ -21,6 +21,9 @@ import com.weatherapp.model.ShowWeatherDetails;
 
 import java.util.ArrayList;
 
+/**
+ * Created by ankit on 30/3/15.
+ */
 
 public class GridViewAdapter extends BaseAdapter {
     final Context cont;
@@ -73,6 +76,4 @@ public class GridViewAdapter extends BaseAdapter {
     private static class ViewHolder {
         public TextView textViewDate, textViewTempMax, textViewTempMin;
     }
-
-
 }

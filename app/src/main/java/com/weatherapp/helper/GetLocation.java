@@ -7,14 +7,11 @@ import android.location.LocationManager;
 import android.os.Bundle;
 
 /**
- * Created by Ankit on 29-Jan-15.
+ * Created by ankit on 30/3/15.
  */
 public class GetLocation {
     LocationManager locationManager;
-//    public static Double latitude;
-//    public static Double longitude;
-      Context context;
-      Location locate;
+    Location locate;
 
     public GetLocation(Context context) {
 
@@ -23,7 +20,7 @@ public class GetLocation {
         LocationListener locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                locate=location;
+                locate = location;
             }
 
             @Override
@@ -42,19 +39,15 @@ public class GetLocation {
             }
         };
 
-        if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER))
-        {
+        if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-        }
-        else
-        {
+        } else {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
         }
     }
 
-   public Location returnLocation()
-   {
-       return locate;
-   }
+    public Location returnLocation() {
+        return locate;
+    }
 
 }

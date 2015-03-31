@@ -1,7 +1,13 @@
 package com.weatherapp.api.objects;
 
 import java.util.ArrayList;
+
 import com.google.gson.annotations.Expose;
+
+
+/**
+ * Created by ankit on 30/3/15.
+ */
 
 public class GetWeatherReport {
 
@@ -17,90 +23,70 @@ public class GetWeatherReport {
     private java.util.List<AllLists> list = new ArrayList<AllLists>();
 
     /**
-     *
-     * @return
-     * The cod
+     * @return The cod
      */
     public String getCod() {
         return cod;
     }
 
     /**
-     *
-     * @param cod
-     * The cod
+     * @param cod The cod
      */
     public void setCod(String cod) {
         this.cod = cod;
     }
 
     /**
-     *
-     * @return
-     * The message
+     * @return The message
      */
     public double getMessage() {
         return message;
     }
 
     /**
-     *
-     * @param message
-     * The message
+     * @param message The message
      */
     public void setMessage(double message) {
         this.message = message;
     }
 
     /**
-     *
-     * @return
-     * The city
+     * @return The city
      */
     public City getCity() {
         return city;
     }
 
     /**
-     *
-     * @param city
-     * The city
+     * @param city The city
      */
     public void setCity(City city) {
         this.city = city;
     }
 
     /**
-     *
-     * @return
-     * The cnt
+     * @return The cnt
      */
     public int getCnt() {
         return cnt;
     }
 
     /**
-     *
-     * @param cnt
-     * The cnt
+     * @param cnt The cnt
      */
     public void setCnt(int cnt) {
         this.cnt = cnt;
     }
 
     /**
-     *
-     * @return
-     * The list
+     * @return The list
      */
     public java.util.List<AllLists> getList() {
         return list;
     }
 
     /**
-     *
-     * @param list
-     * The list
+     * @param list The list
      */
     public void setList(java.util.List<AllLists> list) {
         this.list = list;

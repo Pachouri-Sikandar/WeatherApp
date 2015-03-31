@@ -4,6 +4,10 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
+/**
+ * Created by ankit on 30/3/15.
+ */
+
 public class CancelableCallback<T> implements Callback<T> {
 
     private final Callback callback;
@@ -29,9 +33,9 @@ public class CancelableCallback<T> implements Callback<T> {
     }
 
     @Override
-    public void failure(RetrofitError retrofitError)
-    {  if (!canceled) {
-        callback.failure(retrofitError);
-    }
+    public void failure(RetrofitError retrofitError) {
+        if (!canceled) {
+            callback.failure(retrofitError);
+        }
     }
 }

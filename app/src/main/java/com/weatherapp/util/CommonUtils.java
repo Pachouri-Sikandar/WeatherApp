@@ -46,8 +46,7 @@ import retrofit.client.Response;
  */
 public class CommonUtils {
 
-    public static void showToast(String message)
-    {
+    public static void showToast(String message) {
         Toast.makeText(SugarApp.getSugarContext(), message, Toast.LENGTH_SHORT).show();
     }
 
@@ -64,8 +63,7 @@ public class CommonUtils {
     public static CancelableCallback<GetWeatherReport> callBackGetWeather;
 
 
-
-    public static ArrayList<WeatherInfoResultObject> getWeatherDetails(final Activity activity, final String cityName, final ArrayList<WeatherInfoResultObject> listWeatherInfo, final ArrayList<ShowWeatherDetails>gridList, final RecyclerView mainRecyclerView) {
+    public static ArrayList<WeatherInfoResultObject> getWeatherDetails(final Activity activity, final String cityName, final ArrayList<WeatherInfoResultObject> listWeatherInfo, final ArrayList<ShowWeatherDetails> gridList, final RecyclerView mainRecyclerView) {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         final ProgressDialog ringProgressDialog = ProgressDialog.show(activity, "Fetching ...", "Weather Details...", true);
@@ -111,8 +109,7 @@ public class CommonUtils {
                                 WeatherInfoResultObject weatherInfoResultObject = new WeatherInfoResultObject(cityName, countryName, currentDate, weatherCondition, windSpeed, actualTemp, weatherDescription, tempMax, tempMin);
                                 listWeatherInfo.add(weatherInfoResultObject);
 
-                                for (int loopDays = 0; loopDays <= 13; loopDays++)
-                                {
+                                for (int loopDays = 0; loopDays <= 13; loopDays++) {
                                     Date dateed = new Date(getWeatherReport.getList().get(loopDays).getDt() * 1000L);
                                     SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yy");
                                     sdf.setTimeZone(TimeZone.getTimeZone("GMT-4"));
@@ -125,14 +122,13 @@ public class CommonUtils {
                                 }
 
 
-                                if(listWeatherInfo!=null && listWeatherInfo.size() > 0){
+                                if (listWeatherInfo != null && listWeatherInfo.size() > 0) {
                                     mainRecyclerView.setVisibility(View.VISIBLE);
                                     mainRecyclerView.setAdapter(new CardViewAdapter(activity, listWeatherInfo, gridList));
-                                    System.out.println("Size: "+listWeatherInfo.size());
-                                }
-                                else{
+                                    System.out.println("Size: " + listWeatherInfo.size());
+                                } else {
                                     mainRecyclerView.setVisibility(View.GONE);
-                                    System.out.println("Size else: "+listWeatherInfo.size());
+                                    System.out.println("Size else: " + listWeatherInfo.size());
                                 }
                             }
 
@@ -161,8 +157,7 @@ public class CommonUtils {
     public static boolean flag = false;
     public static String currentCityName = "";
 
-    public static String getCurrentCity(Activity activity)
-    {
+    public static String getCurrentCity(Activity activity) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         final ProgressDialog ringProgressDialog = ProgressDialog.show(activity, "Please wait ...", "Fetching Location...", true);
         ringProgressDialog.setCancelable(true);
@@ -172,20 +167,20 @@ public class CommonUtils {
                 @Override
                 public void run() {
                     try {
-        locationManager = (LocationManager)SugarApp.getSugarContext().getSystemService(Context.LOCATION_SERVICE);
-        flag = displayGpsStatus();
-        if (flag) {
+                        locationManager = (LocationManager) SugarApp.getSugarContext().getSystemService(Context.LOCATION_SERVICE);
+                        flag = displayGpsStatus();
+                        if (flag) {
 
-            locationListener = new MyLocationListener();
+                            locationListener = new MyLocationListener();
 
-            locationManager.requestLocationUpdates(LocationManager
-                    .GPS_PROVIDER, 20000, 10,locationListener);
+                            locationManager.requestLocationUpdates(LocationManager
+                                    .GPS_PROVIDER, 20000, 10, locationListener);
 
-        } else {
-            CommonUtils.showToast("Check Your GPS");
-        }
+                        } else {
+                            CommonUtils.showToast("Check Your GPS");
+                        }
 
-        System.out.println("Current City: "+currentCityName);
+                        System.out.println("Current City: " + currentCityName);
 
                         Thread.sleep(25000);
 
@@ -219,18 +214,14 @@ public class CommonUtils {
         @Override
         public void onLocationChanged(Location loc) {
 
-
-            String longitude = "Longitude: " +loc.getLongitude();
-            String latitude = "Latitude: " +loc.getLatitude();
-
-            String cityName=null;
+            String cityName = null;
             Geocoder gcd = new Geocoder(SugarApp.getSugarContext(), Locale.getDefault());
             List<Address> addresses;
             try {
                 addresses = gcd.getFromLocation(loc.getLatitude(), loc.getLongitude(), 1);
                 if (addresses.size() > 0)
                     System.out.println(addresses.get(0).getLocality());
-                cityName=addresses.get(0).getLocality();
+                cityName = addresses.get(0).getLocality();
             } catch (IOException e) {
                 e.printStackTrace();
             }

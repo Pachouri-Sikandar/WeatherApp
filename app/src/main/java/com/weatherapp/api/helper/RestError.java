@@ -2,6 +2,10 @@ package com.weatherapp.api.helper;
 
 import com.google.gson.annotations.Expose;
 
+/**
+ * Created by ankit on 30/3/15.
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 

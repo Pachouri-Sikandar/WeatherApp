@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/myPrimaryColor"
-    android:padding="10dp"
-    android:layout_height="wrap_content">
+    android:orientation="vertical"
+    android:padding="10dp">
+
     <TextView
+        android:id="@+id/headerRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Header"
         android:paddingLeft="10dp"
+        android:text="Header"
         android:textColor="@color/whiteColor"
-        android:textSize="22sp"
-        android:id="@+id/headerRecyclerView"
-        />
+        android:textSize="22sp" />
 
 </LinearLayout>

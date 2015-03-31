@@ -3,7 +3,7 @@ package com.weatherapp.model;
 import java.io.Serializable;
 
 /**
- * Created by Ankit on 02-Feb-15.
+ * Created by ankit on 30/3/15.
  */
 public class WeatherInfoResultObject{
     String cityName, countryName, todayDate, weatherCondition, windSpeed, temperature, weatherDescription, tempMax, tempMin;

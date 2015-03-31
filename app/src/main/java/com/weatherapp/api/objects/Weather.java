@@ -2,87 +2,75 @@ package com.weatherapp.api.objects;
 
 import com.google.gson.annotations.Expose;
 
+/**
+ * Created by ankit on 30/3/15.
+ */
+
 public class Weather {
 
-@Expose
-private int id;
-@Expose
-private String main;
-@Expose
-private String description;
-@Expose
-private String icon;
+    @Expose
+    private int id;
+    @Expose
+    private String main;
+    @Expose
+    private String description;
+    @Expose
+    private String icon;
 
-/**
-*
-* @return
-* The id
-*/
-public int getId() {
-return id;
-}
+    /**
+     * @return The id
+     */
+    public int getId() {
+        return id;
+    }
 
-/**
-*
-* @param id
-* The id
-*/
-public void setId(int id) {
-this.id = id;
-}
+    /**
+     * @param id The id
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
 
-/**
-*
-* @return
-* The main
-*/
-public String getMain() {
-return main;
-}
+    /**
+     * @return The main
+     */
+    public String getMain() {
+        return main;
+    }
 
-/**
-*
-* @param main
-* The main
-*/
-public void setMain(String main) {
-this.main = main;
-}
+    /**
+     * @param main The main
+     */
+    public void setMain(String main) {
+        this.main = main;
+    }
 
-/**
-*
-* @return
-* The description
-*/
-public String getDescription() {
-return description;
-}
+    /**
+     * @return The description
+     */
+    public String getDescription() {
+        return description;
+    }
 
-/**
-*
-* @param description
-* The description
-*/
-public void setDescription(String description) {
-this.description = description;
-}
+    /**
+     * @param description The description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-/**
-*
-* @return
-* The icon
-*/
-public String getIcon() {
-return icon;
-}
+    /**
+     * @return The icon
+     */
+    public String getIcon() {
+        return icon;
+    }
 
-/**
-*
-* @param icon
-* The icon
-*/
-public void setIcon(String icon) {
-this.icon = icon;
-}
+    /**
+     * @param icon The icon
+     */
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
 }

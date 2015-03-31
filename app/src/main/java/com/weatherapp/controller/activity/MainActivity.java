@@ -21,8 +21,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.common_frame_layout);
 
-        if (savedInstanceState == null)
-        {
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new MainFragment())
                     .commit();
@@ -46,8 +45,7 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public void onBackPressed() {
-        if (doubleBackPressed)
-        {
+        if (doubleBackPressed) {
             super.onBackPressed();
             return;
         }
