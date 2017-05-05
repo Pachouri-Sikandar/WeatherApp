@@ -78,6 +78,7 @@ public class MainFragment extends Fragment {
                 if (searchedCity.equals("")) {
                     CommonUtils.showToast("Enter City Name");
                 } else {
+                    CommonUtils.hideKeyboard(imgSearch, getActivity());
                     CommonUtils.getWeatherDetails(getActivity(), searchedCity, listWeatherInfo, gridList, mainRecyclerView);
                 }
 

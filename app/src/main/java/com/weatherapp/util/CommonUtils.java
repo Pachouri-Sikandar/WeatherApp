@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.orm.SugarApp;
@@ -27,7 +28,6 @@ import com.weatherapp.model.ShowWeatherDetails;
 import com.weatherapp.model.WeatherInfoResultObject;
 
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -243,6 +243,13 @@ public class CommonUtils {
         public void onStatusChanged(String provider,
                                     int status, Bundle extras) {
             // TODO Auto-generated method stub
+        }
+    }
+
+    public static void hideKeyboard(View view, Context context) {
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 }
