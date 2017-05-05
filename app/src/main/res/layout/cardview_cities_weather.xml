@@ -1,184 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
 
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mainCardView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    >
-
-    <LinearLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/mainCardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        >
 
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="4dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewCityName"
-                android:layout_width="wrap_content"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Chandigarh"
-                android:textSize="@dimen/text_CityName"
-                android:textStyle="bold" />
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/textViewCityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Chandigarh"
+                    android:textSize="@dimen/text_CityName"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewCountryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="INDIA"
+                    android:textSize="@dimen/text_CountryName"
+                    android:visibility="gone"/>
+
+
+            </RelativeLayout>
 
             <TextView
-                android:id="@+id/textViewCountryName"
+                android:id="@+id/textViewDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="INDIA"
-                android:textSize="@dimen/text_CountryName"
-                android:visibility="gone" />
-
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/textViewDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:padding="4dp"
-            android:text="Today: "
-            android:textSize="@dimen/text_Details"
-            android:textStyle="bold" />
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp">
-
-            <TextView
-                android:id="@+id/textViewWeatherCondition"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Cloudy"
+                android:padding="4dp"
+                android:text="Today: "
                 android:textSize="@dimen/text_Details"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/textViewWindSpeed"
-                android:layout_width="wrap_content"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textViewWeatherCondition"
-                android:text="Wind"
-                android:textSize="@dimen/text_Details" />
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="4dp">
-
-            <ImageView
-                android:id="@+id/imgWeather"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_launcher" />
-
-            <TextView
-                android:id="@+id/textViewTemperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="60dp"
-                android:text="18"
-                android:textSize="@dimen/text_TodaysTemp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/textViewTemperature"
-                android:text="0"
-                android:textSize="@dimen/text_Details" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="16dp"
-                android:layout_toRightOf="@+id/textViewTemperature"
-                android:orientation="vertical">
+                android:padding="4dp">
 
                 <TextView
-                    android:id="@+id/textViewWeatherDescription"
+                    android:id="@+id/textViewWeatherCondition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Description"
-                    android:textSize="@dimen/text_Details" />
+                    android:layout_alignParentLeft="true"
+                    android:text="Cloudy"
+                    android:textSize="@dimen/text_Details"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewWindSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/textViewWeatherCondition"
+                    android:text="Wind"
+                    android:textSize="@dimen/text_Details"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/imgWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_launcher"/>
+
+                <TextView
+                    android:id="@+id/textViewTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:text="18"
+                    android:textSize="@dimen/text_TodaysTemp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textViewTemperature"
+                    android:text="0"
+                    android:textSize="@dimen/text_Details"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/textViewTemperature"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/textViewWeatherDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Max:"
-                        android:textSize="@dimen/text_Details" />
+                        android:text="Description"
+                        android:textSize="@dimen/text_Details"/>
 
-                    <TextView
-                        android:id="@+id/textViewTempMax"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:text="Max"
-                        android:textSize="@dimen/text_Details" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:text="Min: "
-                        android:textSize="@dimen/text_Details" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max:"
+                            android:textSize="@dimen/text_Details"/>
 
-                    <TextView
-                        android:id="@+id/textViewTempMin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:text="Min"
-                        android:textSize="@dimen/text_Details" />
+                        <TextView
+                            android:id="@+id/textViewTempMax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="Max"
+                            android:textSize="@dimen/text_Details"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Min: "
+                            android:textSize="@dimen/text_Details"/>
+
+                        <TextView
+                            android:id="@+id/textViewTempMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="Min"
+                            android:textSize="@dimen/text_Details"/>
+                    </LinearLayout>
+
                 </LinearLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-        </RelativeLayout>
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ScrollView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <GridView
-                    android:id="@+id/gridView"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="230dp"
-                    android:columnWidth="40dp"
-                    android:horizontalSpacing="4dp"
-                    android:numColumns="7"></GridView>
+                    android:layout_height="wrap_content">
 
-            </LinearLayout>
-        </ScrollView>
+                    <GridView
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:columnWidth="40dp"
+                        android:horizontalSpacing="4dp"
+                        android:numColumns="7"></GridView>
 
-    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
 
 
-</android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
