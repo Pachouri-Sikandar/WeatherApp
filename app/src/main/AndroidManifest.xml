@@ -17,6 +17,7 @@
 
         <activity
             android:name=".controller.activity.SplashActivity"
+            android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             >
@@ -28,6 +29,7 @@
 
         <activity
             android:name=".controller.activity.MainActivity"
+            android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             >
